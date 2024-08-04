@@ -23,5 +23,4 @@ Tutorial Followed: https://medium.com/@mbrazel/open-source-self-hosted-rag-llm-s
 
   5b. From Terminal:
     > python config.py (to initialize the vector database)
-    
     > rag_query.py (to begin RAG system)
