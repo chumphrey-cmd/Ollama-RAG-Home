@@ -1,4 +1,4 @@
-NOTE: Utilizing workstation with the following specs: 1 NVIDIA RTX 3080
+NOTE: Utilized personal laptop with 1 NVIDIA RTX 3080
 Tutorial Followed: https://medium.com/@mbrazel/open-source-self-hosted-rag-llm-server-with-chromadb-docker-ollama-7e6c6913da7a
 
 1. Deployed WSL2 on machine and initiated CUDA installation on WSL2
@@ -16,3 +16,11 @@ Tutorial Followed: https://medium.com/@mbrazel/open-source-self-hosted-rag-llm-s
   4b. Validate response time and accuracy with rag_query.py and the larger database content, if slow response attempt to increase performance via more GPU (Work Laptop), additional preprocessing steps, or less data
   4c. Once response time and accuracy are suitable, implement gradio server for users to interact with model within LAN
   4d. Further brainstorming regarding how to incorproate with the DDS-Mv1e OR in a separate instance...
+
+5. To run RAG system do the following:
+  5a. From WSL2:
+    > $ sudo sudo docker run -p 8000:8000 chromadb/chroma
+
+  5b. From Terminal:
+    > python config.py (to initialize the vector database)
+    > rag_query.py (to begin RAG system)
