@@ -22,5 +22,5 @@ Tutorial Followed: https://medium.com/@mbrazel/open-source-self-hosted-rag-llm-s
     > $ sudo sudo docker run -p 8000:8000 chromadb/chroma
 
   5b. From Terminal:
-    > python config.py (to initialize the vector database)
-    > rag_query.py (to begin RAG system)
+  > python config.py (to initialize the vector database)
+  > rag_query.py (to begin RAG system)
