@@ -10,6 +10,9 @@ Pre-requisites:
    > python -m venv "name_of_venv"
    > "name_of_venv"\Scripts\activate
 
+5. From your created virtual environment install all required libraries
+   > pip install -r requirements.txt 
+
 Installing and Running Models w/ Ollama:
 Open WSL terminal and run the following to download Ollama:
 > curl -fsSL https://ollama.com/install.sh | sh
