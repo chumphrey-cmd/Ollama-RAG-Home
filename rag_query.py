@@ -5,7 +5,10 @@ from ollama import Client
 
 def Extract_context(query):
     """Retrieves relevant context from the ChromaDB vector store based on the query."""
-    chroma_client = chromadb.HttpClient(host='172.20.132.45', port=8000)
+
+    ###___UPDATE IP ADDRESS HERE___###
+    chroma_client = chromadb.HttpClient(host='YOUR_WSL_IP_GOES_HERE', port=8000)
+
     embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     db = Chroma(
         client=chroma_client,
@@ -46,8 +49,11 @@ def get_ques_response_prompt(question):
     """
 
 def generate_rag_response(content,question):
+
     client = Client(host='http://localhost:11434') # Ollama typically runs on port 11434 verify Ollama is running by browsing to: http://localhost:11434/
-    stream = client.chat(model='mistral:latest', messages=[
+
+    ###___UPDATE OLLAMA MODEL HERE___###
+    stream = client.chat(model='YOUR_OLLAMA_MODEL_GOES_HERE', messages=[
     {"role": "system", "content": get_system_message_rag(content)},            
     {"role": "user", "content": get_ques_response_prompt(question)}
     ], stream=True)
