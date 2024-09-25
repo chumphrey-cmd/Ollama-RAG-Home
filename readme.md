@@ -50,7 +50,9 @@
 ## Setting Up Ollama RAG
 
 1. Upload Data
-- Open your preferred IDE, upload, and save PDFs into the data directory.
+- Open your preferred IDE.
+- Create a `data` directory.
+- Upload PDFs into the `data` directory.
 
 2. Modify Configuration Files
 - Open VSCode and modify **chroma_client.py**:
@@ -64,14 +66,20 @@
 
 ## Running the Project
 
-1. **Initialize Docker Container**
+1. **Load and Split Documents**
+   - Load PDF docs from the `data` directory and split each into chunks.
+      ```sh
+      python loader.py
+      ```
+
+3. **Initialize Docker Container**
    - Pull and initiate `chromadb/chroma` container from Docker
 
      ```sh
      sudo docker run -p 8000:8000 chromadb/chroma
      ```
 
-2. **Create Vector Database**
+4. **Create Vector Database**
    - Initialize the data directory containing your documents to create a vector database
 
      ```sh
@@ -79,7 +87,7 @@
      ```
    - **Note:** Each time you modify the documents in the `data` directory, re-run `chroma_client.py`.
 
-3. **Launch Interactive RAG System**
+5. **Launch Interactive RAG System**
 
    ```sh
    python rag_query.py
