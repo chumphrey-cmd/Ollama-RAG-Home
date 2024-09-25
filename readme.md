@@ -14,13 +14,22 @@
 
    ```sh
    nvidia-smi
+   ```
 
 4. **Set Up Python Virtual Environment**
-- Open VSCode
-- Create and activate a Python 3.10+ virtual environment
+- Create and activate a **Python 3.10** virtual environment
+
+   ```sh
+   python -m venv [name_of_venv]
+   ```
+
+   ```sh
+   .\[name_of_venv]\Scripts\activate
+   ```
 
    ```sh
    pip install -r requirements.txt
+   ```
 
 ## Installing and Running Models with Ollama (WINDOWS 🪟)
 
