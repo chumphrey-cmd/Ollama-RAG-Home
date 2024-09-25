@@ -68,6 +68,7 @@
 
 1. **Load and Split Documents**
    - Load PDF docs from the `data` directory and split each into chunks.
+     
       ```sh
       python loader.py
       ```
