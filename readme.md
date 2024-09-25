@@ -90,8 +90,9 @@
 
 5. **Launch Interactive RAG System**
 
-   ```sh
-   python rag_query.py
+      ```sh
+      python rag_query.py
+      ```
 
 ## References/Inspiration
 
