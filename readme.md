@@ -22,30 +22,63 @@
    ```sh
    pip install -r requirements.txt
 
-## Installing and Running Models with Ollama
-1. Download Ollama
+## Installing and Running Models with Ollama (WINDOWS 🪟)
+
+1. Download Ollama for Windows
+- Download Ollama for Windows **[HERE](https://ollama.com/download/windows)**
+  
+**NOTE:** If your virtual environment is created using Windows, you must ensure that the Ollama models are pulled within a PowerShell environment.
+
+2.  Download the Model of Your Choice
+- From PowerShell terminal, download a model from [HERE](https://ollama.com/library)
+
+   ```sh
+   ollama run "name_of_your_model"
+   ```
+3. Verify Downloaded Model
+- Verify the model and note its syntax (e.g., mistral:latest)
+
+   ```sh
+   ollama list
+   ```
+
+4. Determine WSL IP Address
+- From WSL terminal, determine your WSL IP address (look under the **eth#** interface)
+- IP address listed will be used to host and interact with your `chromadb/chroma` Docker container
+
+   ```sh
+   ip a
+   ```
+
+## Installing and Running Models with Ollama (Unix 🐧)
+
+1. Download Ollama for WSL
 - Open WSL terminal and run the following command:
 
    ```sh
    curl -fsSL https://ollama.com/install.sh | sh
+   ```
 
 2. Download the Model of Your Choice
 - From WSL terminal, download a model from [HERE](https://ollama.com/library)
 
    ```sh
    ollama run "name_of_your_model"
+   ```
 
 3. Verify Downloaded Model
 - Verify the model and note its syntax (e.g., mistral:latest)
 
    ```sh
    ollama list
+   ```
 
 4. Determine WSL IP Address
 - From WSL terminal, determine your WSL IP address (look under the **eth#** interface)
 
    ```sh
    ip a
+   ```
 
 ## Setting Up Ollama RAG
 
